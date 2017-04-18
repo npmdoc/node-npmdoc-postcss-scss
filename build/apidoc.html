@@ -1,0 +1,609 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/postcss/postcss-scss#readme"
+
+    >postcss-scss (v0.4.1)</a>
+</h1>
+<h4>SCSS parser for PostCSS</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.postcss-scss">module postcss-scss</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.parse">
+            function <span class="apidocSignatureSpan">postcss-scss.</span>parse
+            <span class="apidocSignatureSpan">(scss, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_parser">
+            function <span class="apidocSignatureSpan">postcss-scss.</span>scss_parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_stringifier">
+            function <span class="apidocSignatureSpan">postcss-scss.</span>scss_stringifier
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.stringify">
+            function <span class="apidocSignatureSpan">postcss-scss.</span>stringify
+            <span class="apidocSignatureSpan">(node, builder)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">postcss-scss.</span>scss_parser.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">postcss-scss.</span>scss_stringifier.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.postcss-scss.scss_parser">module postcss-scss.scss_parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_parser.scss_parser">
+            function <span class="apidocSignatureSpan">postcss-scss.</span>scss_parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.postcss-scss.scss_parser.prototype">module postcss-scss.scss_parser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_parser.prototype.comment">
+            function <span class="apidocSignatureSpan">postcss-scss.scss_parser.prototype.</span>comment
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_parser.prototype.rule">
+            function <span class="apidocSignatureSpan">postcss-scss.scss_parser.prototype.</span>rule
+            <span class="apidocSignatureSpan">(tokens)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_parser.prototype.tokenize">
+            function <span class="apidocSignatureSpan">postcss-scss.scss_parser.prototype.</span>tokenize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.postcss-scss.scss_stringifier">module postcss-scss.scss_stringifier</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_stringifier.scss_stringifier">
+            function <span class="apidocSignatureSpan">postcss-scss.</span>scss_stringifier
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.postcss-scss.scss_stringifier.prototype">module postcss-scss.scss_stringifier.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_stringifier.prototype.comment">
+            function <span class="apidocSignatureSpan">postcss-scss.scss_stringifier.prototype.</span>comment
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.postcss-scss.scss_stringifier.prototype.decl">
+            function <span class="apidocSignatureSpan">postcss-scss.scss_stringifier.prototype.</span>decl
+            <span class="apidocSignatureSpan">(node, semicolon)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.postcss-scss" id="apidoc.module.postcss-scss">module postcss-scss</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.parse" id="apidoc.element.postcss-scss.parse">
+        function <span class="apidocSignatureSpan">postcss-scss.</span>parse
+        <span class="apidocSignatureSpan">(scss, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scssParse(scss, opts) {
+    var input = new _input2.default(scss, opts);
+
+    var parser = new _scssParser2.default(input);
+    parser.tokenize();
+    parser.loop();
+
+    return parser.root;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_parser" id="apidoc.element.postcss-scss.scss_parser">
+        function <span class="apidocSignatureSpan">postcss-scss.</span>scss_parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ScssParser() {
+    _classCallCheck(this, ScssParser);
+
+    return _possibleConstructorReturn(this, _Parser.apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_stringifier" id="apidoc.element.postcss-scss.scss_stringifier">
+        function <span class="apidocSignatureSpan">postcss-scss.</span>scss_stringifier
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ScssStringifier() {
+    _classCallCheck(this, ScssStringifier);
+
+    return _possibleConstructorReturn(this, _Stringifier.apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.stringify" id="apidoc.element.postcss-scss.stringify">
+        function <span class="apidocSignatureSpan">postcss-scss.</span>stringify
+        <span class="apidocSignatureSpan">(node, builder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scssStringify(node, builder) {
+    var str = new _scssStringifier2.default(builder);
+    str.stringify(node);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var _scssStringifier2 = _interopRequireDefault(_scssStringifier);
+
+function _interopRequireDefault(obj) { return obj &#x26;&#x26; obj.__esModule ? obj : { default: obj }; }
+
+function scssStringify(node, builder) {
+    var str = new _scssStringifier2.default(builder);
+    str.<span class="apidocCodeKeywordSpan">stringify</span>(node);
+}
+module.exports = exports[&#x27;default&#x27;];
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjc3Mtc3RyaW5naWZ5LmVzNiJdLCJuYW1lcyI6WyJzY3NzU3RyaW5naWZ5Iiwibm9kZSIsImJ1aWxkZXIiLCJzdHIiLCJzdHJpbmdpZnkiXSwibWFwcGluZ3MiOiI7OztrQkFFd0JBLGE7O0FBRnhCOzs7Ozs7QUFFZSxTQUFTQSxhQUFULENBQXVCQyxJQUF2QixFQUE2QkMsT0FBN0IsRUFBc0M7QUFDakQsUUFBSUMsTUFBTSw4QkFBb0JELE9BQXBCLENBQVY7QUFDQUMsUUFBSUMsU0FBSixDQUFjSCxJQUFkO0FBQ0giLCJmaWxlIjoic2Nzcy1zdHJpbmdpZnkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgU2Nzc1N0cmluZ2lmaWVyIGZyb20gJy4vc2Nzcy1zdHJpbmdpZmllcic7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIHNjc3NTdHJpbmdpZnkobm9kZSwgYnVpbGRlcikge1xuICAgIGxldCBzdHIgPSBuZXcgU2Nzc1N0cmluZ2lmaWVyKGJ1aWxkZXIpO1xuICAgIHN0ci5zdHJpbmdpZnkobm9kZSk7XG59XG4iXX0
+=
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.postcss-scss.scss_parser" id="apidoc.module.postcss-scss.scss_parser">module postcss-scss.scss_parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_parser.scss_parser" id="apidoc.element.postcss-scss.scss_parser.scss_parser">
+        function <span class="apidocSignatureSpan">postcss-scss.</span>scss_parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ScssParser() {
+    _classCallCheck(this, ScssParser);
+
+    return _possibleConstructorReturn(this, _Parser.apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.postcss-scss.scss_parser.prototype" id="apidoc.module.postcss-scss.scss_parser.prototype">module postcss-scss.scss_parser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_parser.prototype.comment" id="apidoc.element.postcss-scss.scss_parser.prototype.comment">
+        function <span class="apidocSignatureSpan">postcss-scss.scss_parser.prototype.</span>comment
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function comment(token) {
+    if (token[6] === &#x27;inline&#x27;) {
+        var node = new _comment2.default();
+        this.init(node, token[2], token[3]);
+        node.raws.inline = true;
+        node.source.end = { line: token[4], column: token[5] };
+
+        var text = token[1].slice(2);
+        if (/^\s*$/.test(text)) {
+            node.text = &#x27;&#x27;;
+            node.raws.left = text;
+            node.raws.right = &#x27;&#x27;;
+        } else {
+            var match = text.match(/^(\s*)([^]*[^\s])(\s*)$/);
+            var fixed = match[2].replace(/(\*\/|\/\*)/g, &#x27;*//*&#x27;);
+            node.text = fixed;
+            node.raws.left = match[1];
+            node.raws.right = match[3];
+            node.raws.text = match[2];
+        }
+    } else {
+        _Parser.prototype.comment.call(this, token);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_parser.prototype.rule" id="apidoc.element.postcss-scss.scss_parser.prototype.rule">
+        function <span class="apidocSignatureSpan">postcss-scss.scss_parser.prototype.</span>rule
+        <span class="apidocSignatureSpan">(tokens)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rule(tokens) {
+    var withColon = false;
+    var brackets = 0;
+    var value = &#x27;&#x27;;
+    for (var _iterator = tokens, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol
+.iterator]();;) {
+        var _ref;
+
+        if (_isArray) {
+            if (_i &#x3e;= _iterator.length) break;
+            _ref = _iterator[_i++];
+        } else {
+            _i = _iterator.next();
+            if (_i.done) break;
+            _ref = _i.value;
+        }
+
+        var _i2 = _ref;
+
+        if (withColon) {
+            if (_i2[0] !== &#x27;comment&#x27; &#x26;&#x26; _i2[0] !== &#x27;{&#x27;) {
+                value += _i2[1];
+            }
+        } else if (_i2[0] === &#x27;space&#x27; &#x26;&#x26; _i2[1].indexOf(&#x27;\n&#x27;) !== -1) {
+            break;
+        } else if (_i2[0] === &#x27;(&#x27;) {
+            brackets += 1;
+        } else if (_i2[0] === &#x27;)&#x27;) {
+            brackets -= 1;
+        } else if (brackets === 0 &#x26;&#x26; _i2[0] === &#x27;:&#x27;) {
+            withColon = true;
+        }
+    }
+
+    if (!withColon || value.trim() === &#x27;&#x27; || /^[a-zA-Z-:#]/.test(value)) {
+        _Parser.prototype.rule.call(this, tokens);
+    } else {
+
+        tokens.pop();
+        var node = new _nestedDeclaration2.default();
+        this.init(node);
+
+        var last = tokens[tokens.length - 1];
+        if (last[4]) {
+            node.source.end = { line: last[4], column: last[5] };
+        } else {
+            node.source.end = { line: last[2], column: last[3] };
+        }
+
+        while (tokens[0][0] !== &#x27;word&#x27;) {
+            node.raws.before += tokens.shift()[1];
+        }
+        node.source.start = { line: tokens[0][2], column: tokens[0][3] };
+
+        node.prop = &#x27;&#x27;;
+        while (tokens.length) {
+            var type = tokens[0][0];
+            if (type === &#x27;:&#x27; || type === &#x27;space&#x27; || type === &#x27;comment&#x27;) {
+                break;
+            }
+            node.prop += tokens.shift()[1];
+        }
+
+        node.raws.between = &#x27;&#x27;;
+
+        var token = void 0;
+        while (tokens.length) {
+            token = tokens.shift();
+
+            if (token[0] === &#x27;:&#x27;) {
+                node.raws.between += token[1];
+                break;
+            } else {
+                node.raws.between += token[1];
+            }
+        }
+
+        if (node.prop[0] === &#x27;_&#x27; || node.prop[0] === &#x27;*&#x27;) {
+            node.raws.before += node.prop[0];
+            node.prop = node.prop.slice(1);
+        }
+        node.raws.between += this.spacesAndCommentsFromStart(tokens);
+        this.precheckMissedSemicolon(tokens);
+
+        for (var i = tokens.length - 1; i &#x3e; 0; i--) {
+            token = tokens[i];
+            if (token[1] === &#x27;!important&#x27;) {
+                node.important = true;
+                var string = this.stringFrom(tokens, i);
+                string = this.spacesFromEnd(tokens) + string;
+                if (string !== &#x27; !important&#x27;) {
+                    node.raws.important = string;
+                }
+                break;
+            } else if (token[1] === &#x27;important&#x27;) {
+                var cache = tokens.slice(0);
+                var str = &#x27;&#x27;;
+                for (var j = i; j &#x3e; 0; j--) {
+                    var _type = cache[j][0];
+                    if (str.trim().indexOf(&#x27;!&#x27;) === 0 &#x26;&#x26; _type !== &#x27;space&#x27;) {
+                        break;
+                    }
+                    str = cache.pop()[1] + str;
+                }
+                if (str.trim().indexOf(&#x27;!&#x27;) === 0) {
+                    node.important = true;
+                    node.raws.important = str;
+                    tokens = cache;
+                }
+            }
+
+            if (token[0] !== &#x27;space&#x27; &#x26;&#x26; token[0] !== &#x27;comment&#x27;) {
+                break;
+            }
+        }
+
+        this.raw(node, &#x27;value&#x27;, tokens);
+
+        if (node.value.indexOf(&#x27;:&#x27;) !== -1) {
+            this.checkMissedSemicolon(tokens);
+        }
+
+        this.current = node;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_parser.prototype.tokenize" id="apidoc.element.postcss-scss.scss_parser.prototype.tokenize">
+        function <span class="apidocSignatureSpan">postcss-scss.scss_parser.prototype.</span>tokenize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tokenize() {
+    this.tokens = (0, _scssTokenize2.default)(this.input);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function _interopRequireDefault(obj) { return obj &#x26;&#x26; obj.__esModule ? obj : { default: obj }; }
+
+function scssParse(scss, opts) {
+    var input = new _input2.default(scss, opts);
+
+    var parser = new _scssParser2.default(input);
+    parser.<span class="apidocCodeKeywordSpan">tokenize</span>();
+    parser.loop();
+
+    return parser.root;
+}
+module.exports = exports[&#x27;default&#x27;];
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjc3MtcGFyc2UuZXM2Il0sIm5hbWVzIjpbInNjc3NQYXJzZSIsInNjc3MiLCJvcHRzIiwiaW5wdXQiLCJwYXJzZXIiLCJ0b2tlbml6ZSIsImxvb3AiLCJyb290Il0sIm1hcHBpbmdzIjoiOzs7a0JBSXdCQSxTOztBQUp4Qjs7OztBQUVBOzs7Ozs7QUFFZSxTQUFTQSxTQUFULENBQW1CQyxJQUFuQixFQUF5QkMsSUFBekIsRUFBK0I7QUFDMUMsUUFBSUMsUUFBUSxvQkFBVUYsSUFBVixFQUFnQkMsSUFBaEIsQ0FBWjs7QUFFQSxRQUFJRSxTQUFTLHlCQUFlRCxLQUFmLENBQWI7QUFDQUMsV0FBT0MsUUFBUDtBQUNBRCxXQUFPRSxJQUFQOztBQUVBLFdBQU9GLE9BQU9HLElBQWQ7QUFDSCIsImZpbGUiOiJzY3NzLXBhcnNlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IElucHV0IGZyb20gJ3Bvc3Rjc3MvbGliL2lucHV0JztcblxuaW1wb3J0IFNjc3NQYXJzZXIgZnJvbSAnLi9zY3NzLXBhcnNlcic7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIHNjc3NQYXJzZShzY3NzLCBvcHRzKSB7XG4gICAgbGV0IGlucHV0ID0gbmV3IElucHV0KHNjc3MsIG9wdHMpO1xuXG4gICAgbGV0IHBhcnNlciA9IG5ldyBTY3NzUGFyc2VyKGlucHV0KTtcbiAgICBwYXJzZXIudG9rZW5pemUoKTtcbiAgICBwYXJzZXIubG9vcCgpO1xuXG4gICAgcmV0dXJuIHBhcnNlci5yb290O1xufVxuIl19
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.postcss-scss.scss_stringifier" id="apidoc.module.postcss-scss.scss_stringifier">module postcss-scss.scss_stringifier</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_stringifier.scss_stringifier" id="apidoc.element.postcss-scss.scss_stringifier.scss_stringifier">
+        function <span class="apidocSignatureSpan">postcss-scss.</span>scss_stringifier
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ScssStringifier() {
+    _classCallCheck(this, ScssStringifier);
+
+    return _possibleConstructorReturn(this, _Stringifier.apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.postcss-scss.scss_stringifier.prototype" id="apidoc.module.postcss-scss.scss_stringifier.prototype">module postcss-scss.scss_stringifier.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_stringifier.prototype.comment" id="apidoc.element.postcss-scss.scss_stringifier.prototype.comment">
+        function <span class="apidocSignatureSpan">postcss-scss.scss_stringifier.prototype.</span>comment
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function comment(node) {
+    var left = this.raw(node, &#x27;left&#x27;, &#x27;commentLeft&#x27;);
+    var right = this.raw(node, &#x27;right&#x27;, &#x27;commentRight&#x27;);
+
+    if (node.raws.inline) {
+        var text = node.raws.text || node.text;
+        this.builder(&#x27;//&#x27; + left + text + right, node);
+    } else {
+        this.builder(&#x27;/*&#x27; + left + node.text + right + &#x27;*/&#x27;, node);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.postcss-scss.scss_stringifier.prototype.decl" id="apidoc.element.postcss-scss.scss_stringifier.prototype.decl">
+        function <span class="apidocSignatureSpan">postcss-scss.scss_stringifier.prototype.</span>decl
+        <span class="apidocSignatureSpan">(node, semicolon)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decl(node, semicolon) {
+    if (!node.isNested) {
+        _Stringifier.prototype.decl.call(this, node, semicolon);
+    } else {
+
+        var between = this.raw(node, &#x27;between&#x27;, &#x27;colon&#x27;);
+        var string = node.prop + between + this.rawValue(node, &#x27;value&#x27;);
+        if (node.important) {
+            string += node.raws.important || &#x27; !important&#x27;;
+        }
+
+        this.builder(string + &#x27;{&#x27;, node, &#x27;start&#x27;);
+
+        var after = void 0;
+        if (node.nodes &#x26;&#x26; node.nodes.length) {
+            this.body(node);
+            after = this.raw(node, &#x27;after&#x27;);
+        } else {
+            after = this.raw(node, &#x27;after&#x27;, &#x27;emptyBody&#x27;);
+        }
+        if (after) this.builder(after);
+        this.builder(&#x27;}&#x27;, node, &#x27;end&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
